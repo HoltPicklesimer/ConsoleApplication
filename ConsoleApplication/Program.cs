@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication
 {
@@ -11,26 +6,22 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            string name, state, todayString;
-            DateTime today, christmasDay;
-            int daysTilChristmas;
-
-            // Display my name and state
-            name = "Ethan Picklesimer";
-            state = "Ohio";
+            // Display name and location
+            var name = "Ethan Picklesimer";
+            var location = "Dayton, Ohio";
 
             Console.WriteLine($"My name is {name}.");
-            Console.WriteLine($"I am from {state}.");
+            Console.WriteLine($"I am from {location}.");
 
             // Display today's date with no time
-            today = DateTime.Today;
-            todayString = today.ToString("d");
+            var today = DateTime.Today;
+            var todayString = today.ToString("d");
 
             Console.WriteLine($"The current date is {todayString}.");
 
             // Display the number of days until Christmas this year
-            christmasDay = new DateTime(today.Year, 12, 25);
-            daysTilChristmas = (christmasDay - today).Days;
+            var christmasDay = new DateTime(today.Year, 12, 25);
+            var daysTilChristmas = (christmasDay - today).Days;
 
             Console.WriteLine("The number of days until Christmas" +
                 $" this year is {daysTilChristmas} days.");
