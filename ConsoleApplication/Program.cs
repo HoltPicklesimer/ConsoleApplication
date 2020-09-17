@@ -48,6 +48,7 @@ namespace ConsoleApplication
             glassArea + " square meters");
 
             // Prevent the Console from closing in Debug mode
+            Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
