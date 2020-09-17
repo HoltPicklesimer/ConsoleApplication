@@ -11,11 +11,11 @@ namespace ConsoleApplication
             var location = "Dayton, Ohio";
 
             Console.WriteLine($"My name is {name}.");
-            Console.WriteLine($"I am from {location}.");
+            Console.WriteLine($"I am from {location}.\n");
 
             // Display today's date with no time
-            var today = DateTime.Today;
-            var todayString = today.ToString("d");
+            var today = DateTime.Now;
+            var todayString = today.ToShortDateString();
 
             Console.WriteLine($"The current date is {todayString}.");
 
@@ -24,7 +24,7 @@ namespace ConsoleApplication
             var daysTilChristmas = (christmasDay - today).Days;
 
             Console.WriteLine("The number of days until Christmas" +
-                $" this year is {daysTilChristmas} days.");
+                $" this year is {daysTilChristmas} days.\n");
 
             // Programming example from 2.1
             double width, height, woodLength, glassArea;
@@ -39,13 +39,12 @@ namespace ConsoleApplication
             height = double.Parse(heightString);
 
             woodLength = 2 * (width + height) * 3.25;
-
             glassArea = 2 * (width * height);
 
             Console.WriteLine("The length of the wood is " +
             woodLength + " feet");
             Console.WriteLine("The area of the glass is " +
-            glassArea + " square meters");
+            glassArea + " square meters\n");
 
             // Prevent the Console from closing in Debug mode
             Console.WriteLine("Press any key to exit.");
